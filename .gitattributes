@@ -1,0 +1,27 @@
+# 统一换行符，避免 Windows / macOS 协作时整文件 diff
+* text=auto eol=lf
+
+# Windows 批处理必须 CRLF；Unix 启动脚本必须 LF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+gradlew text eol=lf
+
+# 需要保留原始字节的文件
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.ico  binary
+*.jar  binary
+*.keystore binary
+*.apk  binary
+
+# 让 GitHub 正确识别语言占比
+*.java linguist-language=Java
+*.gradle linguist-language=Groovy
+web/app.js linguist-detectable=true
+
+# 语言统计时不把第三方 wrapper 计入
+android/gradle/wrapper/gradle-wrapper.jar linguist-vendored
+LICENSE linguist-documentation
+*.md linguist-documentation

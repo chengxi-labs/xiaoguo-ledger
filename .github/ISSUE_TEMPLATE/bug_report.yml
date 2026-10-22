@@ -1,0 +1,75 @@
+name: Bug 反馈
+description: 报告一个可以复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚠️ 请先阅读
+        本仓库是公开的。**不要在 Issue 里粘贴真实账目、截图里的金额与备注、或任何个人信息。**
+        需要示例数据时，请用 `node scripts/gen-demo-ledger.mjs` 生成，或手写两三条假记录。
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 运行环境
+      options:
+        - Android APK
+        - 浏览器 / PWA
+        - 两者都有
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 见 App 内或 Releases 页面；网页版可填 commit 短哈希
+      placeholder: "1.0.3"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 设备与系统
+      placeholder: "Pixel 7 / Android 14；或 Chrome 129 / Windows 11"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 用假数据描述，不要贴真实账单
+      placeholder: |
+        1. 打开 App
+        2. 记一笔 12.00 元餐饮
+        3. 切到上个月
+        4. 汇总金额显示为 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 控制台报错 / 截图（可选）
+      description: 截图请打码金额与备注
+      render: shell
+    validations:
+      required: false

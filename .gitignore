@@ -1,0 +1,45 @@
+# ---- 签名与密钥：绝不入库 -------------------------------------------
+*.keystore
+*.jks
+*.p12
+keystore.properties
+!keystore.properties.example
+
+# ---- 真实账单数据：绝不入库 -----------------------------------------
+imports/real/
+exports/
+*.csv
+!docs/**/*.csv
+# 演示数据受版本控制，显式放行
+!web/imports/shark-ledger.json
+!android/app/src/main/assets/www/imports/shark-ledger.json
+
+# ---- 构建产物 -------------------------------------------------------
+.gradle/
+build/
+app/build/
+android/app/build/
+local.properties
+*.iml
+captures/
+.cxx/
+release/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# ---- 编辑器 / 系统 --------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 依赖与缓存 -----------------------------------------------------
+node_modules/
+.pnpm-store/
+*.log
+npm-debug.log*

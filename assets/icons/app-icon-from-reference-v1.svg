@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="60" x2="930" y2="965" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9ED"/>
+      <stop offset=".52" stop-color="#F1F3E5"/>
+      <stop offset="1" stop-color="#DCEBE0"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(520 490) rotate(90) scale(420)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="tile">
+      <rect width="1024" height="1024" rx="226"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <rect width="1024" height="1024" fill="url(#halo)"/>
+    <image
+      href="apple-reference-source.png"
+      x="-190"
+      y="-140"
+      width="1404"
+      height="1404"
+      preserveAspectRatio="xMidYMid meet"
+      style="mix-blend-mode:multiply"
+    />
+  </g>
+</svg>
